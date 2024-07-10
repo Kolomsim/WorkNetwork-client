@@ -5,7 +5,7 @@ const Sidebar = () => {
 	const userData = JSON.parse(localStorage.getItem('userData'))
 
 	if (!userData) {
-		return <Navigate to='/auth/login' />
+		return <Navigate to='/register' />
 	}
 
 	const userLink = userData.username

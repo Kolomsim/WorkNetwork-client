@@ -17,7 +17,7 @@ export default function LoginPage() {
 			localStorage.setItem('userData', '')
 			const loggedIn = localStorage.getItem('accessToken')
 			if (!loggedIn) {
-				return navigate('/auth/login')
+				return navigate('/login')
 			}
 		} catch (error) {
 			console.error('Ошибка при отправке запроса:', error)

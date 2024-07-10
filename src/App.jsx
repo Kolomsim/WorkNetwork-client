@@ -47,51 +47,37 @@ function App() {
 
 				<Route
 					path='/chats'
-					element={authenticated ? <ChatPage /> : <Navigate to='/auth/login' />}
+					element={authenticated ? <ChatPage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='/user/:username'
-					element={authenticated ? <UserPage /> : <Navigate to='/auth/login' />}
+					element={authenticated ? <UserPage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='/groups'
-					element={
-						authenticated ? <ListOfGroups /> : <Navigate to='/auth/login' />
-					}
+					element={authenticated ? <ListOfGroups /> : <Navigate to='/login' />}
 				/>
 				<Route path='/job-search' element={<JobSearch />} />
 				<Route
 					path='/groups/:id'
-					element={
-						authenticated ? <GroupPage /> : <Navigate to='/auth/login' />
-					}
+					element={authenticated ? <GroupPage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='/forum'
-					element={
-						authenticated ? <ForumsPage /> : <Navigate to='/auth/login' />
-					}
+					element={authenticated ? <ForumsPage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='/profile'
-					element={
-						authenticated ? <ProfilePage /> : <Navigate to='/auth/login' />
-					}
+					element={authenticated ? <ProfilePage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='/forums/:forumId'
-					element={
-						authenticated ? <TopicPage /> : <Navigate to='/auth/login' />
-					}
+					element={authenticated ? <TopicPage /> : <Navigate to='/login' />}
 				/>
 				<Route
 					path='*'
 					element={
-						authenticated ? (
-							<Navigate to='/chats' />
-						) : (
-							<Navigate to='/auth/login' />
-						)
+						authenticated ? <Navigate to='/chats' /> : <Navigate to='/login' />
 					}
 				/>
 			</Routes>

@@ -1,8 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 const Sidebar = () => {
 	const userData = JSON.parse(localStorage.getItem('userData'))
+
+	if (!userData) {
+		return <Navigate to='/auth/login' />
+	}
+
 	const userLink = userData.username
 
 	return (

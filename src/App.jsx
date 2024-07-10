@@ -39,11 +39,12 @@ function App() {
 	return (
 		<Layout>
 			<Routes>
+				<Route path='/signup' element={<RegisterPage />} />
 				<Route
-					path='/auth/login'
+					path='/login'
 					element={<LoginPage setAuthenticated={setAuthenticated} />}
 				/>
-				<Route path='/auth/signup' element={<RegisterPage />} />
+
 				<Route
 					path='/chats'
 					element={authenticated ? <ChatPage /> : <Navigate to='/auth/login' />}

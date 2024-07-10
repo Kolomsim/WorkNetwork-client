@@ -89,7 +89,7 @@ export default function RegisterPage() {
 					<button type='submit'>Регистрация</button>
 				</form>
 				<div className='goToLogin'>
-					<Link to='/auth/login'>
+					<Link to='/login'>
 						<button>Войти</button>
 					</Link>
 					<p>Уже есть аккаунт в WorkNetwork? Войдите в него!</p>

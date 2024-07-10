@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 export default function LoginPage({ setAuthenticated }) {
 	const [formData, setFormData] = useState({
@@ -64,7 +63,7 @@ export default function LoginPage({ setAuthenticated }) {
 					<button type='submit'>Отправить</button>
 				</form>
 				<div className='goToRegister'>
-					<Link to='/auth/signup'>
+					<Link to='/signup'>
 						<button>Зарегистрироваться</button>
 					</Link>
 					<p>

@@ -16,7 +16,7 @@
 @import url('../components/ListOfForum/ListOfForum.css');
 @import url('../components/ForumTopic/Topic.css');
 @import url('../components/JobFound/JobFound.css');
-@import url('../components/CreateForum/CreateForum.jsx');
+@import url('../components/CreateForum/CreateForum.css');
 
 * {
 	margin: 0;

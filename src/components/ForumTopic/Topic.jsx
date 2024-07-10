@@ -18,7 +18,7 @@ const Topic = () => {
 			const authToken = localStorage.getItem('accessToken')
 			try {
 				const response = await axios.get(
-					`${process.env.REACT_APP_API_URL}/forums/${forumId}/comments`,
+					`${import.meta.env.REACT_APP_API_URL}/forums/${forumId}/comments`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,
@@ -65,16 +65,18 @@ const Topic = () => {
 				attachment.endsWith('.png') ||
 				attachment.endsWith('.jpeg') ? (
 					<img
-						src={`${process.env.REACT_APP_API_URL}/${attachment}`}
+						src={`${import.meta.env.REACT_APP_API_URL}/${attachment}`}
 						alt={`Image ${index}`}
 						onClick={() =>
-							setModalImage(`${process.env.REACT_APP_API_URL}/${attachment}`)
+							setModalImage(
+								`${import.meta.env.REACT_APP_API_URL}/${attachment}`
+							)
 						}
 						className='attachment-image'
 					/>
 				) : (
 					<a
-						href={`${process.env.REACT_APP_API_URL}/${attachment}`}
+						href={`${import.meta.env.REACT_APP_API_URL}/${attachment}`}
 						target='_blank'
 						rel='noopener noreferrer'
 					>
@@ -93,7 +95,9 @@ const Topic = () => {
 					<div className='comment-header'>
 						<div className='user-info'>
 							<img
-								src={`http://localhost:4000/${comment.creator.avatar}`}
+								src={`${import.meta.env.REACT_APP_API_URL}/${
+									comment.creator.avatar
+								}`}
 								alt={comment.creator.fullname}
 								className='avatar'
 							/>

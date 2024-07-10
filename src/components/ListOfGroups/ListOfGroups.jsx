@@ -12,7 +12,7 @@ const Groups = () => {
 			const authToken = localStorage.getItem('accessToken')
 			const userData = JSON.parse(localStorage.getItem('userData'))
 			const response = await axios.get(
-				`${process.env.REACT_APP_API_URL}/groups`,
+				`${import.meta.env.REACT_APP_API_URL}/groups`,
 				{
 					headers: {
 						Authorization: `Bearer ${authToken}`,
@@ -44,7 +44,7 @@ const Groups = () => {
 				>
 					<div className='groupInfo'>
 						<img
-							src={`${process.env.REACT_APP_API_URL}/${group.avatar}`}
+							src={`${import.meta.env.REACT_APP_API_URL}/${group.avatar}`}
 							className='groupImg'
 						/>
 						<p className='group-link'>{group.name}</p>

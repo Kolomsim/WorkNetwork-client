@@ -13,11 +13,14 @@ const Forum = ({ currentUser }) => {
 		const authToken = localStorage.getItem('accessToken')
 		const fetchForums = async () => {
 			try {
-				const response = await axios.get(`http://localhost:4000/forums`, {
-					headers: {
-						Authorization: `Bearer ${authToken}`,
-					},
-				})
+				const response = await axios.get(
+					`${import.meta.env.REACT_APP_API_URL}/forums`,
+					{
+						headers: {
+							Authorization: `Bearer ${authToken}`,
+						},
+					}
+				)
 				setForums(response.data)
 				setFilteredForums(response.data)
 			} catch (error) {

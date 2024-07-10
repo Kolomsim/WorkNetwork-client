@@ -19,7 +19,7 @@ const UserProfile = () => {
 	const { username: currentProfileLink } = useParams()
 	const authToken = localStorage.getItem('accessToken')
 	const fileUploadRef = useRef(null)
-	const apiUrl = process.env.REACT_APP_API_URL
+	const apiUrl = import.meta.env.REACT_APP_API_URL
 
 	useEffect(() => {
 		const getUserInfo = async () => {

@@ -21,14 +21,17 @@ const ListOfChats = ({ onSelectChat, createdNewChat }) => {
 			try {
 				const authToken = localStorage.getItem('accessToken')
 				const userData = JSON.parse(localStorage.getItem('userData'))
-				const response = await axios.get(`http://localhost:4000/chats`, {
-					headers: {
-						Authorization: `Bearer ${authToken}`,
-					},
-					params: {
-						userId: userData.id,
-					},
-				})
+				const response = await axios.get(
+					`${import.meta.env.REACT_APP_API_URL}/chats`,
+					{
+						headers: {
+							Authorization: `Bearer ${authToken}`,
+						},
+						params: {
+							userId: userData.id,
+						},
+					}
+				)
 				setChats(response.data)
 			} catch (error) {
 				console.error('Ошибка при отправке запроса:', error)

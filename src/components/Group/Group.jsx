@@ -12,11 +12,14 @@ const Group = () => {
 		const userId = localStorage.getItem('userId')
 		const fetchGroup = async () => {
 			try {
-				const response = await axios.get(`http://localhost:4000/groups/${id}`, {
-					headers: {
-						Authorization: `Bearer ${authToken}`,
-					},
-				})
+				const response = await axios.get(
+					`${import.meta.env.REACT_APP_API_URL}/groups/${id}`,
+					{
+						headers: {
+							Authorization: `Bearer ${authToken}`,
+						},
+					}
+				)
 				setGroup(response.data)
 				setCurrentUser(
 					response.data.creator._id === userId ? 'creator' : 'member'
@@ -31,9 +34,12 @@ const Group = () => {
 	const handleSubscribe = async () => {
 		const userId = localStorage.getItem('userId')
 		try {
-			await axios.post(`http://localhost:4000/groups/${id}/subscribe`, {
-				userId,
-			})
+			await axios.post(
+				`${import.meta.env.REACT_APP_API_URL}/groups/${id}/subscribe`,
+				{
+					userId,
+				}
+			)
 		} catch (error) {
 			console.error('Ошибка при подписке на группу:', error)
 		}

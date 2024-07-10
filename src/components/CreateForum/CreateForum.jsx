@@ -40,7 +40,7 @@ const CreateForum = ({ onCreateForum }) => {
 			}
 
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/forums`,
+				`${import.meta.env.VITE_API_URL}/forums`,
 				{ ...formData, attachments: fileId ? [fileId] : [] },
 				{
 					headers: {

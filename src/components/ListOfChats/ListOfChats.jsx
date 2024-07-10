@@ -22,7 +22,7 @@ const ListOfChats = ({ onSelectChat, createdNewChat }) => {
 				const authToken = localStorage.getItem('accessToken')
 				const userData = JSON.parse(localStorage.getItem('userData'))
 				const response = await axios.get(
-					`${import.meta.env.REACT_APP_API_URL}/chats`,
+					`${import.meta.env.VITE_API_URL}/chats`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,

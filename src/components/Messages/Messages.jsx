@@ -19,7 +19,7 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 				)
 				const userPromises = userIds.map(async id => {
 					const res = await axios.get(
-						`${import.meta.env.REACT_APP_API_URL}/user/id/${id}`,
+						`${import.meta.env.VITE_API_URL}/user/id/${id}`,
 						{
 							headers: {
 								Authorization: `Bearer ${authToken}`,

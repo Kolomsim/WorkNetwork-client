@@ -22,7 +22,7 @@ const FileUploadComponent = forwardRef((props, ref) => {
 			const userData = JSON.parse(localStorage.getItem('userData'))
 			const userId = userData.id
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/files/${userId}`,
+				`${import.meta.env.VITE_API_URL}/files/${userId}`,
 				formData,
 				{
 					headers: {

@@ -18,9 +18,10 @@ export default function LoginPage({ setAuthenticated }) {
 		e.preventDefault()
 		try {
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/auth/login`,
+				`${import.meta.env.VITE_API_URL}/auth/login`,
 				formData
 			)
+			console.log(`${import.meta.env.VITE_API_URL}`)
 			console.log('Ответ сервера login:', response.data)
 			localStorage.setItem('accessToken', response.data.accessToken)
 			const userData = {
@@ -67,7 +68,8 @@ export default function LoginPage({ setAuthenticated }) {
 						<button>Зарегистрироваться</button>
 					</Link>
 					<p>
-						После регистрации вы получите доступ ко всем возможностям KolomLink!
+						После регистрации вы получите доступ ко всем возможностям
+						WorkNetwork!
 					</p>
 				</div>
 			</div>

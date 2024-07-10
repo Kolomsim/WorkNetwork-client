@@ -17,7 +17,7 @@ export default function Chat() {
 			try {
 				const authToken = localStorage.getItem('accessToken')
 				const response = await axios.get(
-					`${import.meta.env.REACT_APP_API_URL}/chats`,
+					`${import.meta.env.VITE_API_URL}/chats`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,

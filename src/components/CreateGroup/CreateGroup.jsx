@@ -18,7 +18,7 @@ const CreateGroup = ({ onCreateGroup }) => {
 		const authToken = localStorage.getItem('accessToken')
 		try {
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/groups`,
+				`${import.meta.env.VITE_API_URL}/groups`,
 				{
 					name,
 					description,

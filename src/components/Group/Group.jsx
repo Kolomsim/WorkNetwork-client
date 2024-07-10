@@ -13,7 +13,7 @@ const Group = () => {
 		const fetchGroup = async () => {
 			try {
 				const response = await axios.get(
-					`${import.meta.env.REACT_APP_API_URL}/groups/${id}`,
+					`${import.meta.env.VITE_API_URL}/groups/${id}`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,
@@ -35,7 +35,7 @@ const Group = () => {
 		const userId = localStorage.getItem('userId')
 		try {
 			await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/groups/${id}/subscribe`,
+				`${import.meta.env.VITE_API_URL}/groups/${id}/subscribe`,
 				{
 					userId,
 				}

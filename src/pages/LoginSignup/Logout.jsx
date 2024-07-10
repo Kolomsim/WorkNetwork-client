@@ -9,7 +9,7 @@ export default function LoginPage() {
 		e.preventDefault()
 		try {
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/auth/logout`,
+				`${import.meta.env.VITE_API_URL}/auth/logout`,
 				formData
 			)
 			console.log('Ответ сервера signup:', response.data)

@@ -14,7 +14,7 @@ const Forum = ({ currentUser }) => {
 		const fetchForums = async () => {
 			try {
 				const response = await axios.get(
-					`${import.meta.env.REACT_APP_API_URL}/forums`,
+					`${import.meta.env.VITE_API_URL}/forums`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,

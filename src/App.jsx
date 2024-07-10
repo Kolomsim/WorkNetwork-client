@@ -44,7 +44,10 @@ function App() {
 					path='/login'
 					element={<LoginPage setAuthenticated={setAuthenticated} />}
 				/>
-				<Route element={<ProtectedRoutes authenticated={authenticated} />} />
+				<Route
+					path='*'
+					element={<ProtectedRoutes authenticated={authenticated} />}
+				/>
 			</Routes>
 		</Router>
 	)

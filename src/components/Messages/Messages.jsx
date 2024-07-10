@@ -56,7 +56,7 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 			try {
 				const authToken = localStorage.getItem('accessToken')
 				const response = await axios.get(
-					`http://localhost:4000/chats/${recievedChatId}/messages`,
+					`${import.meta.env.VITE_API_URL}/chats/${recievedChatId}/messages`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,
@@ -103,11 +103,14 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 	const deleteMessage = async messageId => {
 		try {
 			const authToken = localStorage.getItem('accessToken')
-			await axios.delete(`http://localhost:4000/messages/${messageId}`, {
-				headers: {
-					Authorization: `Bearer ${authToken}`,
-				},
-			})
+			await axios.delete(
+				`${import.meta.env.VITE_API_URL}/messages/${messageId}`,
+				{
+					headers: {
+						Authorization: `Bearer ${authToken}`,
+					},
+				}
+			)
 			setMessages(prevMessages =>
 				prevMessages.filter(message => message._id !== messageId)
 			)
@@ -176,7 +179,9 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 														{attachment &&
 															getAttachmentType(attachment) === 'image' && (
 																<img
-																	src={`http://localhost:4000/${attachment}`}
+																	src={`${
+																		import.meta.env.VITE_API_URL
+																	}/${attachment}`}
 																	alt={`Image ${index + 1}`}
 																	className='attachment'
 																/>
@@ -184,7 +189,9 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 														{attachment &&
 															getAttachmentType(attachment) === 'video' && (
 																<video
-																	src={`http://localhost:4000/${attachment}`}
+																	src={`${
+																		import.meta.env.VITE_API_URL
+																	}/${attachment}`}
 																	controls
 																	className='attachment'
 																/>
@@ -192,7 +199,9 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 														{attachment &&
 															getAttachmentType(attachment) === 'file' && (
 																<a
-																	href={`http://localhost:4000/${attachment}`}
+																	href={`${
+																		import.meta.env.VITE_API_URL
+																	}/${attachment}`}
 																	target='_blank'
 																	rel='noopener noreferrer'
 																	className='attachment'

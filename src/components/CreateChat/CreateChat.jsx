@@ -25,7 +25,7 @@ const CreateChatModal = ({ onCreateChat, onClose }) => {
 		if (newParticipant.trim() !== '') {
 			try {
 				const response = await axios.get(
-					`${import.meta.env.REACT_APP_API_URL}/user/login/${newParticipant}`,
+					`${import.meta.env.VITE_API_URL}/user/login/${newParticipant}`,
 					{
 						headers: {
 							Authorization: `Bearer ${authToken}`,
@@ -83,7 +83,7 @@ const CreateChatModal = ({ onCreateChat, onClose }) => {
 		}
 		try {
 			const response = await axios.post(
-				`${import.meta.env.REACT_APP_API_URL}/chats`,
+				`${import.meta.env.VITE_API_URL}/chats`,
 				{ ...newChat, chatname: chatName },
 				{
 					headers: {

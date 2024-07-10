@@ -44,10 +44,7 @@ function App() {
 					path='/login'
 					element={<LoginPage setAuthenticated={setAuthenticated} />}
 				/>
-				<Route
-					path='*'
-					element={<ProtectedRoutes authenticated={authenticated} />}
-				/>
+				<Route element={<ProtectedRoutes authenticated={authenticated} />} />
 			</Routes>
 		</Router>
 	)
@@ -56,41 +53,43 @@ function App() {
 function ProtectedRoutes({ authenticated }) {
 	return (
 		<Layout>
-			<Route
-				path='/chats'
-				element={authenticated ? <ChatPage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='/user/:username'
-				element={authenticated ? <UserPage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='/groups'
-				element={authenticated ? <ListOfGroups /> : <Navigate to='/login' />}
-			/>
-			<Route path='/job-search' element={<JobSearch />} />
-			<Route
-				path='/groups/:id'
-				element={authenticated ? <GroupPage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='/forum'
-				element={authenticated ? <ForumsPage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='/profile'
-				element={authenticated ? <ProfilePage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='/forums/:forumId'
-				element={authenticated ? <TopicPage /> : <Navigate to='/login' />}
-			/>
-			<Route
-				path='*'
-				element={
-					authenticated ? <Navigate to='/chats' /> : <Navigate to='/login' />
-				}
-			/>
+			<Routes>
+				<Route
+					path='/chats'
+					element={authenticated ? <ChatPage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='/user/:username'
+					element={authenticated ? <UserPage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='/groups'
+					element={authenticated ? <ListOfGroups /> : <Navigate to='/login' />}
+				/>
+				<Route path='/job-search' element={<JobSearch />} />
+				<Route
+					path='/groups/:id'
+					element={authenticated ? <GroupPage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='/forum'
+					element={authenticated ? <ForumsPage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='/profile'
+					element={authenticated ? <ProfilePage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='/forums/:forumId'
+					element={authenticated ? <TopicPage /> : <Navigate to='/login' />}
+				/>
+				<Route
+					path='*'
+					element={
+						authenticated ? <Navigate to='/chats' /> : <Navigate to='/login' />
+					}
+				/>
+			</Routes>
 		</Layout>
 	)
 }

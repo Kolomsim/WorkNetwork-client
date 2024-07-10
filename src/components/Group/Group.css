@@ -1,0 +1,35 @@
+/* .group-avatar,
+.group-header {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+.group-title {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.group-description {
+	margin-bottom: 15px;
+}
+
+.group-admin {
+	margin-bottom: 20px;
+}
+
+.edit-group-button,
+.subscribe-button {
+	padding: 10px 20px;
+	border: none;
+	background-color: #007bff;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.edit-group-button:hover,
+.subscribe-button:hover {
+	background-color: #0056b3;
+} */

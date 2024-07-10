@@ -1,0 +1,164 @@
+.chatHeader,
+.messagesBox {
+	background-color: #007bff;
+}
+
+.messagesBox {
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+}
+.messagesScroll {
+	height: 100vh;
+	overflow-y: auto;
+	background-color: #72d3f1;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.messagesContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.messageCard {
+	display: flex;
+	align-items: flex-start;
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 15px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 70%;
+	word-wrap: break-word;
+	flex-direction: column;
+	text-align: start;
+}
+
+.myMessage {
+	align-self: flex-end;
+	background-color: #ffffff;
+	flex-direction: column;
+}
+
+.myMessage .messageDate p {
+	text-align: end;
+}
+
+.userData {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.otherMessage {
+	align-self: flex-start;
+	background-color: #e6e6e6;
+}
+
+.userProfPic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.messageContent {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.messageCard h3 {
+	margin: 0;
+	font-size: 20px;
+	color: #333;
+	height: 50px;
+}
+
+.messageCard p {
+	margin: 0;
+	font-size: 24px;
+	color: #555;
+}
+
+.attachmentContainer {
+	margin-top: 10px;
+	display: flex;
+	gap: 7px;
+	max-width: 500px;
+}
+
+.attachmentContainer img,
+.attachmentContainer video {
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+.attachmentContainer a {
+	color: #007bff;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.attachmentContainer a:hover {
+	text-decoration: underline;
+}
+
+.messageDate p {
+	font-size: 12px;
+}
+
+.myMessage .userData {
+	flex-direction: row-reverse;
+}
+
+.myMessage .userProfPic {
+	margin: 0 0 0 10px;
+}
+
+.otherMessage .userProfPic {
+	margin: 0 10px 0 0;
+}
+
+.messageCard {
+	position: relative;
+	/* Остальные стили */
+}
+
+.deleteButton {
+	position: absolute;
+	border-radius: 10px;
+	padding: 0 3px;
+	top: 0;
+	right: 2px;
+	background: red;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+.modal-content div {
+	display: flex;
+	justify-content: center;
+}
+.modal-content button {
+	margin: 5px 10px;
+	width: 100px;
+}

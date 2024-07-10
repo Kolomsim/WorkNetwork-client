@@ -1,0 +1,100 @@
+.LoginBlock {
+	padding: 0px 20px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.LoginInfoBlock {
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.LoginInfoBlock h1 {
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
+.LoginForm,
+.goToRegister,
+.goToLogin {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 400px;
+	width: 100%;
+}
+
+.loginOrRegister {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.LoginForm {
+	margin-bottom: 10px;
+}
+
+.LoginForm input {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	font-size: 16px;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+}
+
+.LoginForm button,
+.goToRegister button,
+.goToLogin button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.LoginForm button[type='submit'] {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.LoginForm button[type='submit']:hover {
+	background-color: #0056b3;
+}
+
+.goToRegister button:hover,
+.goToLogin button:hover {
+	background-color: #018112;
+}
+
+.goToRegister button,
+.goToLogin button {
+	background-color: #00b919;
+	color: #f9f9f9;
+}
+
+.goToRegister button:hover,
+.goToLogin button:hover {
+	text-decoration: underline;
+}
+
+.goToRegister p,
+.goToLogin p {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #888;
+}

@@ -1,0 +1,167 @@
+.topic-container {
+	padding: 20px;
+	max-width: 1200px;
+	margin: auto;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.attachments {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.attachment img {
+	width: 100px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 5px;
+	transition: transform 0.2s;
+}
+
+.attachment img:hover {
+	transform: scale(1.1);
+}
+
+.forum-comment {
+	flex: 1 1 calc(33.333% - 20px);
+	background-color: white;
+	border: 1px solid #e1e1e1;
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+.attachment a {
+	display: block;
+	text-decoration: none;
+	color: #007bff;
+	font-size: 0.9rem;
+	margin-top: 5px;
+}
+
+.comment {
+	margin-bottom: 20px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.user-info {
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+}
+.comment-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.user-info img.avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.user-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.user-fullname {
+	font-weight: bold;
+}
+
+.comment-content {
+	margin-left: 50px;
+}
+
+.comment-date {
+	font-size: 0.8rem;
+	color: #777;
+	margin-right: 20px;
+}
+
+.comment button:hover {
+	text-decoration: underline;
+}
+
+.replies {
+	margin-top: 15px;
+}
+
+.pagination {
+	margin-top: 20px;
+}
+.replyBtn {
+	padding: 5px;
+	font-weight: bold;
+}
+.pagination button {
+	background: none;
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.pagination button:hover {
+	background-color: #f0f0f0;
+}
+
+.add-comment {
+	margin-top: 30px;
+}
+
+.forum-attachment {
+	display: inline-block;
+	margin: 5px;
+}
+
+.attachment-image {
+	width: 150px;
+	height: auto;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.attachment-image:hover {
+	transform: scale(1.1);
+}
+
+.attachment-modal {
+	padding-top: 100px;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	justify-content: center;
+	align-items: center;
+}
+
+.attachment-modal-content {
+	margin: auto;
+	display: block;
+	max-width: 80%;
+	max-height: 80%;
+}
+
+.attachment-modal-close {
+	position: absolute;
+	top: 20px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+}

@@ -1,0 +1,141 @@
+.formContainer {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.formContainer input[type='text'],
+.formContainer input[type='radio'] {
+	margin-bottom: 10px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.formContainer fieldset {
+	margin-bottom: 20px;
+}
+
+.formContainer label {
+	margin-right: 10px;
+}
+
+.formContainer button[type='submit'],
+.formContainer button[type='button'] {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%; /* Button will take the full width of the container */
+	box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.formContainer button[type='submit']:hover,
+.formContainer button[type='button']:hover {
+	background-color: #0056b3;
+}
+
+.participantsContainer {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.participantsContainer label {
+	margin-right: 10px;
+}
+.deleteUser {
+	background-color: #dc3545;
+}
+.participantsContainer input[type='text'] {
+	flex: 1;
+	margin-right: 10px;
+	margin-bottom: initial;
+}
+
+.participantItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.participantItem span {
+	margin-right: 10px;
+}
+
+.removeParticipantButton {
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.removeParticipantButton:hover {
+	background-color: #bd2130;
+}
+
+.modalchat-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modalchat {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	color: #333;
+}
+
+.modalchat form {
+	display: flex;
+	flex-direction: column;
+}
+
+.modalchat form label {
+	margin-bottom: 8px;
+}
+
+.modalchat form input {
+	padding: 8px;
+	margin-bottom: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.modalchat form button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.modalchat form button:hover {
+	background-color: #0056b3;
+}

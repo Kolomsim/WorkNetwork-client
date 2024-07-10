@@ -1,0 +1,33 @@
+.mainPage {
+	height: 5vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.dialog {
+	display: flex;
+	flex-direction: column;
+	background-color: aliceblue;
+	flex-grow: 1;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.messagesBox {
+	overflow-y: auto;
+	flex-direction: column;
+	display: flex;
+	min-height: 80vh;
+}
+.chatHeader {
+	background-color: aliceblue;
+	margin: 0 20px;
+}
+
+.listOfChats {
+	width: 30%;
+}
+
+.createChatBox {
+	margin-bottom: 20px;
+}

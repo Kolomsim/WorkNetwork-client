@@ -1,17 +1,21 @@
-// App.js
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
-import Layout from './components/Layout/Layout'
-import RegisterPage from './pages/RegisterPage'
-import LoginPage from './pages/LoginPage'
-import ChatPage from './pages/ChatPage'
-import UserPage from './pages/UserPage'
-import ListOfGroups from './pages/ListOfGroups'
-import JobSearch from './pages/JobSearch'
-import GroupPage from './pages/GroupPage'
-import ForumsPage from './pages/ForumsPage'
-import ProfilePage from './pages/ProfilePage'
-import TopicPage from './pages/TopicPage'
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+} from 'react-router-dom'
+import RegisterPage from './pages/LoginSignup/Signup.jsx'
+import LoginPage from './pages/LoginSignup/Login.jsx'
+import ChatPage from './pages/Chat/Chat.jsx'
+import UserPage from './pages/UserProfile/userProfile.jsx'
+import ProfilePage from './pages/UserProfile/userProfile.jsx'
+import Layout from './components/Layout/Layout.jsx'
+import ListOfGroups from './components/ListOfGroups/ListOfGroups.jsx'
+import GroupPage from './components/Group/Group.jsx'
+import ForumsPage from './components/ListOfForum/ListOfForum.jsx'
+import TopicPage from './components/ForumTopic/Topic.jsx'
+import JobSearch from './components/JobFound/JobFound.jsx'
 
 function App() {
 	const [authenticated, setAuthenticated] = useState(false)
@@ -33,17 +37,19 @@ function App() {
 	}
 
 	return (
-		<Routes>
-			<Route path='/signup' element={<RegisterPage />} />
-			<Route
-				path='/login'
-				element={<LoginPage setAuthenticated={setAuthenticated} />}
-			/>
-			<Route
-				path='/*'
-				element={<ProtectedRoutes authenticated={authenticated} />}
-			/>
-		</Routes>
+		<Router>
+			<Routes>
+				<Route path='/signup' element={<RegisterPage />} />
+				<Route
+					path='/login'
+					element={<LoginPage setAuthenticated={setAuthenticated} />}
+				/>
+				<Route
+					path='*'
+					element={<ProtectedRoutes authenticated={authenticated} />}
+				/>
+			</Routes>
+		</Router>
 	)
 }
 

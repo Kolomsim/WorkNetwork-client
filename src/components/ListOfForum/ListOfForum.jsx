@@ -65,12 +65,12 @@ const Forum = ({ currentUser }) => {
 				>
 					{showCreateForum ? 'Отмена' : 'Создать форум'}
 				</button>
-				{showCreateForum && (
-					<div className='create-forum-form'>
-						<CreateForum onCreateForum={handleCreateForum} />
-					</div>
-				)}
 			</div>
+			{showCreateForum && (
+				<div className='create-forum-form'>
+					<CreateForum onCreateForum={handleCreateForum} />
+				</div>
+			)}
 
 			{filteredForums.map(forum => (
 				<div key={forum._id} className='forum-item'>

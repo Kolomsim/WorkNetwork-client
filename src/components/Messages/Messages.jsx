@@ -219,7 +219,7 @@ function Messages({ recievedChatId, recievedNewMessage }) {
 												}}
 											></p>
 										</div>
-										{message.sender === userId && (
+										{message.creatorId === userId && (
 											<button
 												className='deleteButton'
 												onClick={() => handleDeleteConfirmation(message._id)}

@@ -20,8 +20,6 @@ export default function LoginPage({ setAuthenticated }) {
 				`${import.meta.env.VITE_API_URL}/auth/login`,
 				formData
 			)
-			console.log(`${import.meta.env.VITE_API_URL}`)
-			console.log('Ответ сервера login:', response.data)
 			localStorage.setItem('accessToken', response.data.accessToken)
 			const userData = {
 				id: response.data._id,

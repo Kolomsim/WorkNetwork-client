@@ -12,7 +12,6 @@ export default function LoginPage() {
 				`${import.meta.env.VITE_API_URL}/auth/logout`,
 				formData
 			)
-			console.log('Ответ сервера signup:', response.data)
 			localStorage.setItem('accessToken', '')
 			localStorage.setItem('userData', '')
 			const loggedIn = localStorage.getItem('accessToken')

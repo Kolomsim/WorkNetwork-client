@@ -23,7 +23,6 @@ export default function RegisterPage() {
 				`${import.meta.env.VITE_API_URL}/auth/signup`,
 				formData
 			)
-			console.log('Ответ сервера signup:', response.data)
 			localStorage.setItem('accessToken', response.data.accessToken)
 			const userData = {
 				id: response.data._id,
@@ -34,7 +33,6 @@ export default function RegisterPage() {
 			if (loggedIn) {
 				return navigate('/chats')
 			}
-			console.log('Ответ сервера register:', response.data)
 		} catch (error) {
 			console.error('Ошибка при отправке запроса:', error)
 		}

@@ -32,7 +32,6 @@ const CreateChatModal = ({ onCreateChat, onClose }) => {
 						},
 					}
 				)
-				console.log('Response data:', response.data)
 				const { id, username, fullname } = response.data
 				if (id) {
 					setNewChat(prevState => ({

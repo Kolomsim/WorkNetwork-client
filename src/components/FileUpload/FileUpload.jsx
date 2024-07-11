@@ -30,7 +30,6 @@ const FileUploadComponent = forwardRef((props, ref) => {
 					},
 				}
 			)
-			console.log('Ответ сервера загрузка файла:', response.data)
 			return response.data.filePath
 		} catch (error) {
 			console.error('Ошибка при отправке файла:', error)
